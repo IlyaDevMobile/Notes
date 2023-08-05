@@ -2,9 +2,9 @@ package com.ilyakoz.notes.domain
 
 class EditNoteItemUseCase(private val noteListRepository: NoteListRepository) {
 
-    fun editNoteItem(noteItem: NoteItem){
+    fun editNoteItem(noteItem: NoteItem) : Boolean{
 
-        noteListRepository.editNoteItem(noteItem)
+        return noteListRepository.editNoteItem(noteItem)
 
     }
 }
