@@ -1,5 +1,7 @@
 package com.ilyakoz.notes.domain
 
+import androidx.lifecycle.LiveData
+
 interface NoteListRepository {
 
     fun addNoteItem(noteItem: NoteItem)
@@ -10,5 +12,5 @@ interface NoteListRepository {
 
     fun getNoteItem(noteItemId: Int) : NoteItem
 
-    fun getNoteList() : List<NoteItem>
+    fun getNoteList() : LiveData<List<NoteItem>>
 }
